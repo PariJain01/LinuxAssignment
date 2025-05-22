@@ -1,0 +1,42 @@
+ Step 1: Create a File
+
+   touch permission.txt
+
+
+Step 2: Check Default Permissions
+
+   ls -l permission.txt 
+
+-Output example:
+ 
+-rw-r--r-- 1 user group 0 May 22 10:00 myfile.txt
+
+//Owner can read & write
+//Group can read
+//Others can read
+
+ Step 3: Change Permissions Using chmod
+
+  chmod [permissions] [filename]
+
+1. Give full permissions to owner, read/execute to group, and only read to others
+
+chmod 751 permission.txt
+Breakdown of 751:
+
+7 (owner) = read (4) + write (2) + execute (1)
+5 (group) = read (4) + execute (1)
+1 (others) = execute only
+
+2. Remove execute permission for all
+
+  chmod a-x myfile.txt
+
+3. Add execute for owner only
+ 
+  chmod u+x myfile.txt
+
+
+chmod g+w myfile.txt     # Add write to group
+chmod o-r myfile.txt     # Remove read from others
+chmod u=rwx myfile.txt   # Set owner to rwx only

@@ -1,0 +1,21 @@
+1. Create a New Group
+  
+  sudo groupadd devgroup
+
+2. Create a New User and Assign to Group
+
+  sudo useradd -m -G devgroup devuser
+
+4. Check the User and Group
+  
+  id devuser
+
+ 5. Modify the User
+  Add user to another group
+
+  sudo usermod -aG sudo devuser
+   -aG: Append user to new group(s) without removing existing ones.
+
+  Change user's shell
+
+  sudo usermod -s /bin/bash devuser

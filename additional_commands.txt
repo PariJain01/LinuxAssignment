@@ -1,0 +1,23 @@
+1. echo "This is a log file" > log1.log
+
+  Creates a file called log1.log and writes the text into it using echo.
+
+
+2. find . -name "*.log" | xargs grep "log" 
+  
+  find . -name "*.log" — Finds all files ending with .log in the current directory.
+
+| xargs grep "log" — Takes that list of .log files and runs grep "log" on each to search for the word "log" inside them.
+
+
+3. tar -czf logs.tar.gz *.log
+
+  Compresses all .log files into a single archive:
+
+  tar: archive tool
+
+  -c: create
+
+  -z: compress (gzip)
+
+  -f logs.tar.gz: name of archive file
