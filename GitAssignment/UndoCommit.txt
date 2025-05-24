@@ -1,0 +1,57 @@
+Here's how to **undo the last commit** or **remove a file from the remote repository** using Git command-line interface (CLI):
+
+---
+
+🔄 Undo the Last Commit (Keep the changes)
+
+**undo the commit but keep the changes in your working directory**:
+
+   bash
+    git reset --soft HEAD~1
+```
+
+Then, if needed, you can make changes and recommit.
+
+---
+
+🔁 Undo the Last Commit (Discard the changes)
+
+**completely remove the commit and discard changes**:
+
+   bash
+    git reset --hard HEAD~1
+```
+
+Then push the change to the remote:
+
+   bash
+    git push origin master --force
+```
+
+---
+
+---> 🗑️ Remove a File from the Remote Repository
+
+# delete a file that was pushed to GitHub:
+
+Step 1: Remove the file locally
+
+   bash
+    git rm unwanted-file.txt
+```
+
+### Step 2: Commit the change
+
+   bash
+    git commit -m "Removed unwanted-file.txt"
+```
+
+Step 3: Push the change to GitHub
+
+   bash
+    git push origin master
+```
+
+---
+
+✅You’ve now undone a commit or removed a file from the remote repo via CLI.

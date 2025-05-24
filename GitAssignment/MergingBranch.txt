@@ -1,0 +1,94 @@
+Here’s a complete walkthrough on **branching and merging in Git**, including how to **resolve merge conflicts**:
+
+---
+
+🌿 Branching and Merging in Git
+
+✅ Step 1: Create and switch to a new branch
+
+   bash
+    git checkout -b feature-branch
+```
+
+Make some changes in a file (e.g., `index.html`), save, and commit:
+
+   bash
+    git add .
+    git commit -m "Updated index.html in feature-branch"
+```
+
+Push the branch:
+
+   bash
+    git push origin feature-branch
+```
+
+---
+
+✅ Step 2: Switch back to `master` and make conflicting changes
+
+   bash
+    git checkout master
+```
+
+Edit the same line in `index.html` and commit:
+
+   bash
+    git add .
+    git commit -m "Updated index.html in master branch"
+```
+
+---
+
+✅ Step 3: Try merging the feature branch into `master`
+
+   bash
+    git merge feature-branch
+```
+
+⚠️ If there is a conflict, Git will show:
+
+```
+Auto-merging index.html
+CONFLICT (content): Merge conflict in index.html
+Automatic merge failed; fix conflicts and then commit the result.
+```
+
+---
+
+⚔️ Resolving Merge Conflicts
+
+✅ Step 4: Open the conflicted file
+
+Look for conflict markers:
+
+```text
+<<<<<<< HEAD
+This is the content from master branch.
+=======
+This is the content from feature-branch.
+>>>>>>> feature-branch
+```
+
+Manually edit and resolve the conflict by keeping the correct content.
+
+---
+
+✅ Step 5: Add and commit the resolved file
+
+   bash
+    git add index.html
+    git commit -m "Resolved merge conflict in index.html"
+```
+
+---
+
+✅ Step 6: Push the changes
+
+   bash
+    git push origin master
+```
+
+---
+
+✅ You’ve created branches, merged changes, and successfully resolved a Git merge conflict.

@@ -1,0 +1,100 @@
+Here are **more practical Git commands**
+
+---
+
+🧪 Practice More Git Commands
+
+✅ 1. Clone a Repository
+
+Download a remote repository to your local machine:
+
+   bash
+    git clone https://github.com/username/repo.git
+```
+
+---
+
+✅ 2. View Commit History
+
+   bash
+    git log            # Detailed log
+    git log --oneline  # Compact log
+    git show HEAD      # Show details of latest commit
+```
+
+---
+
+✅ 3. Check Branches
+
+   bash
+    git branch           # List local branches
+    git branch -r        # List remote branches
+    git branch -a        # All branches (local + remote)
+```
+
+---
+
+✅ 4. Switch Branches
+
+   bash
+    git checkout branch-name
+```
+
+---
+
+✅ 5. Delete a Local Branch
+
+   bash
+    git branch -d branch-name
+```
+
+---
+
+✅ 6. Stash Changes (temporarily save uncommitted changes)
+   
+   bash
+    git stash              # Save uncommitted changes
+    git stash apply        # Reapply last stashed changes
+    git stash list         # Show stash list
+    git stash drop         # Delete latest stash
+```
+
+---
+
+✅ 7. Revert a Commit (safely undo)
+
+   bash
+    git revert <commit_hash>
+```
+
+> Creates a new commit that undoes the specified commit — good for undoing on shared branches.
+
+---
+
+✅ 8. Check Differences
+
+   bash
+    git diff                     # Compare working directory with staging area
+    git diff --cached            # Compare staging area with last commit
+    git diff branch1..branch2    # Compare branches
+```
+
+---
+
+✅ 9. Tag a Release
+
+   bash
+    git tag v1.0                # Create a lightweight tag
+    git tag -a v1.0 -m "v1.0 release"   # Annotated tag
+    git push origin v1.0        # Push tag to remote
+```
+
+---
+
+✅ 10. View Remote Info
+
+   bash
+    git remote -v
+    git remote show origin
+```
+

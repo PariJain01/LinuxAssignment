@@ -1,0 +1,54 @@
+🌿 Merge Types: Feature Branch Workflow with Pull Request
+
+✅ Step 1: Create and switch to a new branch
+
+   bash:-
+
+    git checkout -b feature-branch
+
+
+---
+
+✅ Step 2: Make changes and commit
+
+For example, modify or create a file:
+
+   bash:-
+
+    echo "New feature added." >> feature.txt
+    git add feature.txt
+    git commit -m "Added new feature in feature-branch"
+
+
+---
+
+✅ Step 3: Push the branch to GitHub
+
+   bash:-
+
+    git push origin feature-branch
+
+
+---
+
+✅ Step 4: Create a Pull Request (PR)
+
+1. Go to your GitHub repo.
+2. GitHub will detect your newly pushed branch and prompt you to "Compare & Pull Request."
+3. Click it and review the changes.
+4. Submit the Pull Request to merge into the `master` branch.
+
+---
+
+✅ Step 5: Merge the branch
+
+On the PR page:
+
+* Click **“Merge Pull Request”**
+* Confirm the merge
+* (Optional) Delete the `feature-branch` after merging
+
+---
+
+**Merge Complete!**
+You’ve now merged code from a feature branch into `master` using a GitHub pull request, a common DevOps collaboration workflow.
